@@ -54,6 +54,23 @@ Removing these warnings entirely requires a paid Apple Developer account and a W
 
 You have an old download. This was a build bug, fixed 2026-08-09 — the app actually supports macOS 12 and later. Delete it, then re-download `LiqScope-Mac.dmg` from [Releases](../../releases). The filename didn't change, so if your browser serves the same broken file from cache, clear it or force a fresh download.
 
-**The app opens but can't load anything**
+**The app opens but the window stays blank white (Mac)**
 
-The app displays a live site, so it needs an internet connection and the service needs to be up. Wait a few minutes and reopen.
+As of the 2026-08-19 build, a failed connection shows a real message
+("Couldn't connect to Tephra Terminal") instead of staying blank, and retries
+automatically for a few seconds. If you're on an older download and see
+plain white with nothing on it, or the message above doesn't clear after
+Reload:
+
+1. Press **⌘R** (View → Reload) — covers most short connection blips.
+2. If that doesn't help and you just woke your Mac from sleep, macOS can end
+   up with a stuck DNS cache for this one address. Turn Wi-Fi off and back on
+   (Control Center → Wi-Fi), then Reload again. If you'd rather use Terminal:
+   `sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder`
+3. Still stuck? The app needs an internet connection and the Tephra Terminal
+   service needs to be up — wait a few minutes and reopen.
+
+**The app opens but can't load anything (Windows/Linux)**
+
+The app displays a live site, so it needs an internet connection and the
+service needs to be up. Wait a few minutes and reopen.
