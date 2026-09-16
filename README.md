@@ -2,7 +2,7 @@
 
 > **Formerly LiqScope.** Same app, new name — if you came here looking for LiqScope, you're in the right place.
 
-**Try it in your browser:** https://tephraterminal.tail9df77a.ts.net/
+**Try it in your browser:** https://tephraterminal-docker.tail9df77a.ts.net/
 
 Native desktop app downloads for Tephra Terminal — an estimated liquidation heatmap tool. See the [Releases](../../releases) page for Mac, Windows, and Linux builds.
 
